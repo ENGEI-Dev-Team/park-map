@@ -1,3 +1,3 @@
 # park-map-practice
 
-test-park-map
+test-hamacho-park
