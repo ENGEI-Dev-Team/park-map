@@ -1,3 +1,4 @@
+import Header from "../components/Header";
 import HeroArea from "../components/organisms/HeroArea";
 import MapArea from "../components/organisms/MapArea";
 
@@ -6,6 +7,7 @@ import MapArea from "../components/organisms/MapArea";
 export default function Home() {
   return (
     <main>
+      <Header />
       <HeroArea />
       <MapArea />
     </main>
