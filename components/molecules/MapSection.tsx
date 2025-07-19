@@ -8,9 +8,9 @@ const MapSection = () => (
     <a href="/pdfs/park-map.pdf" target="_blank" rel="noopener noreferrer">
       <div id="map" className="pt-24 max-w-xl mx-auto hover:opacity-90 transition">
         <MapImage 
-        src="/images/Park-Map.jpg" 
+        src="/images/Park-Map.png" 
         alt="公園マップ" 
-        pdfLink="/docs/park-map.pdf"/>
+        pdfLink="/docs/Park-Map.pdf"/>
       </div>
     </a>
   </div>
