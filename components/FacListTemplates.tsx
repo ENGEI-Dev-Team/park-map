@@ -1,12 +1,12 @@
 "use client";
 
 import { useRef } from "react";
-import { ButtonList } from "../molecules/ButtonList";
-import { SectionList } from "../organisms/SectionList";
-import { Facilities } from "@/app/components/const/type";
+import { ButtonList } from "./molecules/ButtonList";
+import { SectionList } from "./organisms/SectionList";
+
 
 type Props = {
-  items: Facilities[];
+  items: Facility[];
 };
 
 export const FacListTemplates: React.FC<Props> = ({ items }) => {

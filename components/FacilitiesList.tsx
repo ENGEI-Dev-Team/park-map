@@ -1,5 +1,5 @@
-import { FacListTemplates } from "../templates/FacListTemplates";
-import { Data } from "../const/data";
+import { FacListTemplates } from "./FacListTemplates";
+import { Data } from "../app/components/const/data";
 import { FC } from "react";
 
 export const FacilitiesList:FC = () => {

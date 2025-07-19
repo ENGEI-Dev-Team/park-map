@@ -1,4 +1,4 @@
-import { FacilitiesList } from "./components/pages/FacilitiesList";
+import { FacilitiesList } from "../components/FacilitiesList";
 
 // ホームページ
 export default function Home() {
