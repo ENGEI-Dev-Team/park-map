@@ -1,10 +1,12 @@
 // components/molecules/ButtonList.tsx
 import { FC } from "react";
-import { Facilities } from "@/app/components/const/type";
+import { Facility } from "../../app/contents/park-item";
+
+type FacWithCate = Facility & { category: string };
 
 type Props = {
-  items: Facilities[];
-  onScroll: (id: string) => void;
+  items: FacWithCate[];
+  onScroll: (categoryName: string) => void;
 };
 
 export const ButtonList: FC<Props> = ({ items, onScroll }) => (
@@ -12,10 +14,10 @@ export const ButtonList: FC<Props> = ({ items, onScroll }) => (
     {items.map((item) => (
       <button
         key={item.id}
-        onClick={() => onScroll(item.id)}
-        className="relative w-full px-6 py-4 text-black rounded border border-gray-200 bg-slate-100 hover:bg-red-100 transition-colors duration-200"
+        onClick={() => onScroll(item.category)}
+        className="relative w-full h-20 flex items-center justify-center px-6 py-4 text-[#4d392d] bg-[#efe4cf] rounded border  border-[#741910] hover:bg-[#e59c96] transition-colors  duration-200"
       >
-        <span className="block text-center font-medium">{item.title}</span>
+        <span className="block text-center font-medium pr-10">{item.name}</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

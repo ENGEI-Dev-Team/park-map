@@ -2,39 +2,58 @@
 
 import { useRef } from "react";
 import { ButtonList } from "./molecules/ButtonList";
-import { SectionList } from "./organisms/SectionList";
-
+import { Category } from "../app/contents/park-item";
+import FacilityDetail from "./FacilityDetail";
 
 type Props = {
-  items: Facility[];
+  items: Category[];
 };
 
 export const FacListTemplates: React.FC<Props> = ({ items }) => {
   const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({});
+  const facilityDetailRef = useRef<HTMLDivElement>(null);
 
-  // コールバック関数を追加
-  const handleRefSet = (id: string, element: HTMLElement | null) => {
-    sectionRefs.current[id] = element;
+  // カテゴリ名でDOM要素を登録
+  const handleRefSet = (categoryName: string, el: HTMLElement | null) => {
+    sectionRefs.current[categoryName] = el;
   };
 
-  const scrollToSection = (id: string) => {
-    /*デバッグ
-    console.log('Scrolling to:', id);
-    console.log('Available refs:', Object.keys(sectionRefs.current));
-    console.log('Target element:', sectionRefs.current[id]);    */
-    const element = sectionRefs.current[id];
+  // カテゴリ名でスクロール
+  const scrollToSection = (categoryName: string) => {
+    console.log("Scrolling to:", categoryName);
+    console.log("Target element:", sectionRefs.current[categoryName]);
+    console.log("sectionRefs.current:", sectionRefs.current);
+
+    const element = sectionRefs.current[categoryName];
     if (element) {
       element.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
+    } else {
+      console.warn("Section not found for category:", categoryName);
     }
   };
 
+  // ボタン用にカテゴリ名だけ取り出す（施設リストは使わない）
+  const flatItems = items.flatMap((category) =>
+    category.items.map((facility) => ({
+      ...facility,
+      category: category.category,
+    })),
+  );
+
   return (
-    <div className="p-4 space-y-10">
-      <ButtonList items={items} onScroll={scrollToSection} />
-      <SectionList items={items} sectionRefs={handleRefSet} />
+    <div className="space-y-10">
+      {/* カテゴリボタンリスト */}
+      <div className="p-4">
+        <ButtonList items={flatItems} onScroll={scrollToSection} />
+      </div>
+
+      {/* 施設詳細セクション */}
+      <div ref={facilityDetailRef}>
+        <FacilityDetail sectionRefs={handleRefSet} />
+      </div>
     </div>
   );
 };
