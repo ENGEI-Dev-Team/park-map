@@ -33,7 +33,7 @@ export const FacilityListItem: React.FC<FacilityListItemProps> = ({
     >
       <FacilityDescription
         description={facility.description}
-        image={facility.image}
+        images={facility.images}
         alt={facility.name}
       />
     </div>
