@@ -13,7 +13,7 @@ export const SectionList: FC<SectionListProps> = ({ items, sectionRefs }) => {
         <section
           key={item.id}
           ref={(el) => {
-            console.log("Setting ref for:", item.id, el); // デバッグ用
+            /*console.log("Setting ref for:", item.id, el); // デバッグ用*/
             sectionRefs(item.id, el);
           }}
           className="p-6 border rounded-md shadow bg-white min-h-[300px]"
