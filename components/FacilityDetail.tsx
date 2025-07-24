@@ -1,15 +1,19 @@
 "use client";
 
 import React, { useState } from "react";
-import { FacilityCategoryList } from "../app/components/organisms/FacilityCategoryList";
+import { FacilityCategoryList } from "./organisms/FacilityCategoryList";
 import { facilitiesData } from "../app/contents/park-item/data";
+
+type Props = {
+  sectionRefs?: (id: string, element: HTMLElement | null) => void;
+};
 
 /**
  * FacilityDetail
  * 公園施設ページ全体を構成するルートコンポーネント
  * カテゴリ単位で施設を整理・表示する
  */
-const FacilityDetail: React.FC = () => {
+const FacilityDetail: React.FC<Props> = ({ sectionRefs }) => {
   const [openItems, setOpenItems] = useState<Record<string, boolean>>({});
 
   const toggleItem = (name: string) => {
@@ -30,6 +34,7 @@ const FacilityDetail: React.FC = () => {
           category={category}
           openItems={openItems}
           toggleItem={toggleItem}
+          sectionRefs={sectionRefs}
         />
       ))}
     </div>

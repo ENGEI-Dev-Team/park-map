@@ -1,5 +1,5 @@
-import React from 'react'
-import HeroVisual from '../molecules/HeroVisual';
+import React from "react";
+import HeroVisual from "../molecules/HeroVisual";
 
 const HeroArea = () => (
   <div className="mb-10">

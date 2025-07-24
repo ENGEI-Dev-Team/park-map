@@ -1,4 +1,3 @@
-
 // 型定義（Facility, FacilityCategory）
 
 export type Facility = {

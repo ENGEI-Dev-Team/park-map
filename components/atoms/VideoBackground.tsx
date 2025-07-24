@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const VideoBackground = () => (
   <video
@@ -6,7 +6,7 @@ const VideoBackground = () => (
     muted
     loop
     className="absolute top-0 left-0 w-full h-full object-cover"
-    src="/videos/Park-Intro.mp4"
+    src="/videos/park-intro.mp4"
   />
 );
 

@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
 
-import VideoBackground from '../atoms/VideoBackground';
-import TitleText from '../atoms/TitleText';
-import SubTitleText from '../atoms/SubTitleText';
-
+import VideoBackground from "../atoms/VideoBackground";
+import TitleText from "../atoms/TitleText";
+import SubTitleText from "../atoms/SubTitleText";
 
 const HeroVisual = () => (
   <section className="relative w-full h-[70vh] md:h-[100vh] overflow-hidden">

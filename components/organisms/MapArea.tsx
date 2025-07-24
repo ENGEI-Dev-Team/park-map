@@ -1,5 +1,5 @@
-import React from 'react'
-import MapSection from '../molecules/MapSection';
+import React from "react";
+import MapSection from "../molecules/MapSection";
 
 const MapArea = () => (
   <section className="py-10 bg-[#fdfcf7]">

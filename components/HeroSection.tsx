@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import React from 'react'
+import React from "react";
 
 const HeroSection = () => {
   return (
@@ -9,7 +9,6 @@ const HeroSection = () => {
         autoPlay
         muted
         loop
-        
         className="w-full h-full object-cover"
         src="/videos/Park-Intro.mp4" // 圧縮版動画
       />
@@ -18,7 +17,7 @@ const HeroSection = () => {
         <p className="text-xl mt-2">自然と歴史が交差する憩いの場</p>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;

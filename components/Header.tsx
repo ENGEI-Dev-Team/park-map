@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const Header = () => {
   return (
@@ -7,15 +7,25 @@ const Header = () => {
       <nav>
         <ul className="flex space-x-4 text-sm">
           <li>
-            <a href="#map" className="hover:text-[#deb887] transition-colors duration-200">マップ</a>
+            <a
+              href="#map"
+              className="hover:text-[#deb887] transition-colors duration-200"
+            >
+              マップ
+            </a>
           </li>
           <li>
-            <a href="#info" className="hover:text-[#deb887] transition-colors duration-200">施設案内</a>
+            <a
+              href="#info"
+              className="hover:text-[#deb887] transition-colors duration-200"
+            >
+              施設案内
+            </a>
           </li>
         </ul>
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
