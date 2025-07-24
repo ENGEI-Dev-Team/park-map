@@ -1,4 +1,3 @@
-// components/molecules/ButtonList.tsx
 import { FC } from "react";
 import { Facility } from "../../app/contents/park-item";
 
