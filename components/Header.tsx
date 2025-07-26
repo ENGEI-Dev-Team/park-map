@@ -3,7 +3,7 @@ import React from "react";
 const Header = () => {
   return (
     <header className="fixed top-0 left-0 z-10 w-full bg-[#6b4c3b] text-[#fff8dc] px-6 py-4 flex items-center justify-between shadow-md">
-      <h1 className="text-xl font-bold">浜町公園ガイド</h1>
+      <a href="#top" className="text-xl font-bold">浜町公園ガイド</a>
       <nav>
         <ul className="flex space-x-4 text-sm">
           <li>
