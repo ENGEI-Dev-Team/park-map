@@ -1,11 +1,10 @@
 // 型定義（Facility, FacilityCategory）
-// 型定義（Facility, FacilityCategory）
 
 export type Facility = {
   id: number;
   name: string;
   description: string;
-  image: string;
+  images: string[];
 };
 
 export type Category = {
